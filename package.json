@@ -1,0 +1,51 @@
+{
+	"author": "sparrowhawk-ea",
+	"bugs": {
+		"url": "https://github.com/sparrowhawk-ea/fmmp-demo/issues"
+	},
+	"description": "Form Minimap Demo",
+	"devDependencies": {
+		"@fmmp/core": "^1.0.0",
+		"@typescript-eslint/eslint-plugin": "^4.16.1",
+		"@typescript-eslint/parser": "^4.16.1",
+		"eslint": "^7.21.0",
+		"eslint-config-prettier": "^8.1.0",
+		"eslint-plugin-prettier": "^3.3.1",
+		"prettier": "^2.2.1",
+		"tslib": "^2.1.0",
+		"typescript": "^4.2.3"
+	},
+	"files": [
+		"dist/**/*"
+	],
+	"homepage": "https://github.com/sparrowhawk-ea/fmmp-demo#readme",
+	"keywords": [
+		"Demo",
+		"Form",
+		"Minimap"
+	],
+	"license": "MIT",
+	"main": "dist/index.js",
+	"name": "@fmmp/demo",
+	"peerDependencies": {
+		"@fmmp/core": "^1.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sparrowhawk-ea/fmmp-demo.git"
+	},
+	"scripts": {
+		"prebuild": "rm -rf dist",
+		"build": "tsc && cp src/*.css dist",
+		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+		"lint": "eslint --report-unused-disable-directives --ext .ts .",
+		"postversion": "git push && git push --tags",
+		"prepare": "npm run build",
+		"prepublishOnly": "npm run lint",
+		"preversion": "npm run lint",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"version": "npm run format && git add -A src"
+	},
+	"types": "dist/index.d.ts",
+	"version": "1.0.0"
+}
