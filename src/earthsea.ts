@@ -1,4 +1,4 @@
-import { FmmMapString, FmmMapValues } from '@fmmp/core';
+import { FmmMapString, FmmMapValues } from '@eafmm/core';
 
 // =================================================================================================================================
 //						E A

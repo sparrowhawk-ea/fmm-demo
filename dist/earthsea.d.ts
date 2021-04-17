@@ -1,4 +1,4 @@
-import { FmmMapString, FmmMapValues } from '@fmmp/core';
+import { FmmMapString, FmmMapValues } from '@eafmm/core';
 declare type SetStrArray = (s: string[]) => void;
 export declare abstract class Ea {
     static readonly adventures: Record<string, string>;

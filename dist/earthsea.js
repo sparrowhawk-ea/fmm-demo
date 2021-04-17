@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.EaState = exports.EaReactive = exports.Ea = void 0;
-var tslib_1 = require("tslib");
+import { __extends, __spreadArray } from "tslib";
 var Ea = /** @class */ (function () {
     // =============================================================================================================================
     function Ea() {
@@ -15,7 +12,7 @@ var Ea = /** @class */ (function () {
         this.realNamesShown = [];
         this.submitted = false;
         this.useNamesShown = [];
-        this.namesRemaining = tslib_1.__spreadArray([], Object.keys(Ea.namesAll));
+        this.namesRemaining = __spreadArray([], Object.keys(Ea.namesAll));
         this.useNamesShownAsBooleanArray = [];
         Array.from(Array(10)).forEach(function (_) {
             var _a;
@@ -129,7 +126,7 @@ var Ea = /** @class */ (function () {
     };
     // =============================================================================================================================
     Ea.prototype.composeMinimap = function () {
-        this.customWidgetIds = tslib_1.__spreadArray([], this.customWidgetIds); // will trigger a full rerender on minimap
+        this.customWidgetIds = __spreadArray([], this.customWidgetIds); // will trigger a full rerender on minimap
     };
     Ea.adventures = {
         a: 'A Wizard of Earthsea',
@@ -410,12 +407,12 @@ var Ea = /** @class */ (function () {
     };
     return Ea;
 }());
-exports.Ea = Ea;
+export { Ea };
 // =================================================================================================================================
 //						E A R E A C T I V E
 // =================================================================================================================================
 var EaReactive = /** @class */ (function (_super) {
-    tslib_1.__extends(EaReactive, _super);
+    __extends(EaReactive, _super);
     // =============================================================================================================================
     function EaReactive() {
         return _super.call(this) || this;
@@ -426,20 +423,20 @@ var EaReactive = /** @class */ (function (_super) {
     };
     // =============================================================================================================================
     EaReactive.prototype.useNamesAdded = function (_, _n) {
-        this.useNamesShown = tslib_1.__spreadArray([], this.useNamesShown);
+        this.useNamesShown = __spreadArray([], this.useNamesShown);
     };
     // =============================================================================================================================
     EaReactive.prototype.useNamesRemoved = function (_) {
-        this.useNamesShown = tslib_1.__spreadArray([], this.useNamesShown);
+        this.useNamesShown = __spreadArray([], this.useNamesShown);
     };
     return EaReactive;
 }(Ea));
-exports.EaReactive = EaReactive;
+export { EaReactive };
 // =================================================================================================================================
 //						E A S T A T E
 // =================================================================================================================================
 var EaState = /** @class */ (function (_super) {
-    tslib_1.__extends(EaState, _super);
+    __extends(EaState, _super);
     // =============================================================================================================================
     function EaState() {
         return _super.call(this) || this;
@@ -460,12 +457,12 @@ var EaState = /** @class */ (function (_super) {
     };
     // =============================================================================================================================
     EaState.prototype.useNamesAdded = function (_, _n) {
-        this.setStateUseNamesShown(tslib_1.__spreadArray([], this.useNamesShown));
+        this.setStateUseNamesShown(__spreadArray([], this.useNamesShown));
     };
     // =============================================================================================================================
     EaState.prototype.useNamesRemoved = function (_) {
-        this.setStateUseNamesShown(tslib_1.__spreadArray([], this.useNamesShown));
+        this.setStateUseNamesShown(__spreadArray([], this.useNamesShown));
     };
     return EaState;
 }(Ea));
-exports.EaState = EaState;
+export { EaState };
