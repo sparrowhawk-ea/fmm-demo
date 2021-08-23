@@ -1,4 +1,4 @@
-import { FmmMapString, FmmMapValues } from '@eafmm/core';
+import { FmmMapString, FmmStoreValues } from '@eafmm/core';
 
 // =================================================================================================================================
 //						E A
@@ -341,7 +341,7 @@ export abstract class Ea {
 	public readonly fSubmit = this.submit.bind(this);
 	public readonly names1000: string[] = [];
 	public readonly randomQuotes: [string, string][];
-	public customWidgetIds: string[] = [];
+	public customElementIds: string[] = [];
 	public realNamesShown: string[] = [];
 	public submitted = false;
 	public useNamesShown: string[] = [];
@@ -465,7 +465,7 @@ export abstract class Ea {
 
 	// =============================================================================================================================
 	private composeMinimap(): void {
-		this.customWidgetIds = [...this.customWidgetIds]; // will trigger a full rerender on minimap
+		this.customElementIds = [...this.customElementIds]; // will trigger a full rerender on minimap
 	}
 
 	// =============================================================================================================================
@@ -546,7 +546,7 @@ export class EaState extends Ea {
 // =================================================================================================================================
 //						E A R T H S E A
 // =================================================================================================================================
-export interface Earthsea extends FmmMapValues {
+export interface Earthsea extends FmmStoreValues {
 	adventure: string;
 	adventure2: string;
 	adventureAuto: string;

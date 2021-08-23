@@ -8,7 +8,7 @@ var Ea = /** @class */ (function () {
         this.fRemoveUncheckedUseNames = this.removeUncheckedUseNames.bind(this);
         this.fSubmit = this.submit.bind(this);
         this.names1000 = [];
-        this.customWidgetIds = [];
+        this.customElementIds = [];
         this.realNamesShown = [];
         this.submitted = false;
         this.useNamesShown = [];
@@ -126,7 +126,7 @@ var Ea = /** @class */ (function () {
     };
     // =============================================================================================================================
     Ea.prototype.composeMinimap = function () {
-        this.customWidgetIds = __spreadArray([], this.customWidgetIds); // will trigger a full rerender on minimap
+        this.customElementIds = __spreadArray([], this.customElementIds); // will trigger a full rerender on minimap
     };
     Ea.adventures = {
         a: 'A Wizard of Earthsea',

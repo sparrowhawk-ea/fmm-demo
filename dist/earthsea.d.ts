@@ -1,4 +1,4 @@
-import { FmmMapString, FmmMapValues } from '@eafmm/core';
+import { FmmMapString, FmmStoreValues } from '@eafmm/core';
 declare type SetStrArray = (s: string[]) => void;
 export declare abstract class Ea {
     static readonly adventures: Record<string, string>;
@@ -29,7 +29,7 @@ export declare abstract class Ea {
     readonly fSubmit: () => void;
     readonly names1000: string[];
     readonly randomQuotes: [string, string][];
-    customWidgetIds: string[];
+    customElementIds: string[];
     realNamesShown: string[];
     submitted: boolean;
     useNamesShown: string[];
@@ -68,7 +68,7 @@ export declare class EaState extends Ea {
     protected useNamesAdded(_: number, _n: string): void;
     protected useNamesRemoved(_: number[]): void;
 }
-export interface Earthsea extends FmmMapValues {
+export interface Earthsea extends FmmStoreValues {
     adventure: string;
     adventure2: string;
     adventureAuto: string;
