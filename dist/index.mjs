@@ -1,4 +1,4 @@
-export class Ea {
+class Ea {
     constructor() {
         this.fAddRandomUseName = this.addRandomUseName.bind(this);
         this.fOnUpdate = this.onUpdate.bind(this);
@@ -436,7 +436,7 @@ Ea.aggregateLabels = {
     useNames: Ea.controls.useNames.label,
     useNamesAll: Ea.controls.useNamesAll.label
 };
-export class EaReactive extends Ea {
+class EaReactive extends Ea {
     constructor() {
         super();
     }
@@ -449,7 +449,7 @@ export class EaReactive extends Ea {
         this.useNamesShown = [...this.useNamesShown];
     }
 }
-export class EaState extends Ea {
+class EaState extends Ea {
     constructor() {
         super();
         this.setStateRealNamesShown = (_) => { };
@@ -472,3 +472,5 @@ export class EaState extends Ea {
         this.setStateUseNamesShown([...this.useNamesShown]);
     }
 }
+
+export { Ea, EaReactive, EaState };

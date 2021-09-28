@@ -31,7 +31,7 @@ export abstract class Ea {
 		},
 		agree: {
 			label: 'Shall we continue?',
-			placeholder: undefined,
+			placeholder: '',
 			type: 'checkbox'
 		},
 		danceDate: {
@@ -48,7 +48,7 @@ export abstract class Ea {
 		},
 		danceToggle: {
 			label: 'Long Dance?',
-			placeholder: undefined,
+			placeholder: '',
 			type: 'checkbox'
 		},
 		deed: {
@@ -357,7 +357,7 @@ export abstract class Ea {
 
 	// =============================================================================================================================
 	public static randomize<T>(input: T[], count?: number): T[] {
-		for (let i = input.length; --i > 0; ) {
+		for (let i = input.length; --i > 0;) {
 			const j = Math.floor(Math.random() * (i + 1));
 			[input[i], input[j]] = [input[j], input[i]];
 		}
@@ -404,7 +404,7 @@ export abstract class Ea {
 		const selected = this.useNamesGetSelected();
 		const namesRemoved: string[] = [];
 		const indexesRemovedInReverse: number[] = [];
-		for (let i = this.useNamesShown.length; --i >= 0; ) {
+		for (let i = this.useNamesShown.length; --i >= 0;) {
 			// loop must run in reverse order so we can splice() away safely
 			if (selected[i]) continue;
 			const useName = this.useNamesShown.splice(i, 1)[0];
@@ -507,8 +507,8 @@ export class EaReactive extends Ea {
 //						E A S T A T E
 // =================================================================================================================================
 export class EaState extends Ea {
-	private setStateRealNamesShown: SetStrArray;
-	private setStateUseNamesShown: SetStrArray;
+	private setStateRealNamesShown: SetStrArray = (_: string[]) => { /**/ };
+	private setStateUseNamesShown = this.setStateRealNamesShown;
 
 	// =============================================================================================================================
 	public constructor() {
