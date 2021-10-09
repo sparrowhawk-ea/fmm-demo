@@ -13,7 +13,7 @@ export default [
         exports: 'named',
         file: `dist/index.js`,
         format: 'umd',
-        name: 'LayoutEa'
+        name: 'FmmDemo'
       },
       {
         exports: 'named',
