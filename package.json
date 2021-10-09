@@ -5,6 +5,8 @@
 	},
 	"description": "Form Minimap Demo",
 	"devDependencies": {
+		"@rollup/plugin-commonjs": "*",
+		"@rollup/plugin-node-resolve": "*",
 		"@typescript-eslint/eslint-plugin": "*",
 		"@typescript-eslint/parser": "*",
 		"eslint": "*",
