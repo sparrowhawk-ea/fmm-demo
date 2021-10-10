@@ -127,15 +127,15 @@ export abstract class Ea {
 	.fmm-panel {
 		float: right;
 		height: 6.5rem;
-		margin: 5px;
-		width: 10%;
+		width: 25%;
 	}
 	div.detail {
 		float: right;
-		width: 38%;
+		margin: 5px;
+		width: 22%;
 	}
 	div.fmm-detail {
-		width: 400px;
+		width: 300px;
 	}
 	div.fmm-popup {
 		height: 6rem;
